@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light background color */
+        }
+        .container {
+            background-color: #007bff; /* Blue background for the main container */
+            padding: 20px;
+            border-radius: 10px;
+            color: white; /* Text color for visibility */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2, h4 {
+            color: white; /* Header text color */
+        }
+        .list-group-item {
+            background-color: #0056b3; /* Darker blue for user list items */
+            border: none; /* Remove border */
+        }
+        .alert {
+            margin-bottom: 20px; /* Add margin to alert */
+        }
+        .form-control {
+            background-color: #ffffff; /* White background for dropdown */
+            color: #000000; /* Black text for visibility */
+            border: 1px solid #ced4da; /* Light border color */
+        }
+        .form-control:focus {
+            border-color: #80bdff; /* Focused border color */
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Shadow for focused state */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+
+        <!-- Display flash messages -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="alert alert-success" role="alert">
+                    {% for message in messages %}
+                        {{ message }}<br>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <h4>Add New User</h4>
+        <form action="{{ url_for('add_user') }}" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>            
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" required> <!-- New password field -->
+            </div>
+            <div class="form-group">
+                <label for="role">Role:</label>
+                <select class="form-control" id="role" name="role" required>
+                    <option value="" disabled selected>-- Select role to apply --</option> <!-- Default option -->
+                    {% for role in roles %}
+                        <option value="{{ role.role_name }}">{{ role.role_name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Add User</button>
+        </form>
+    </div>
+</body>
+</html>

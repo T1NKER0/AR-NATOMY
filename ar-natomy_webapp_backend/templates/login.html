@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AR-NATOMY</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #001F3F; /* Navy blue background */
+            color: white; /* Change text color to white for contrast */
+        }
+        .menu-bar {
+            background-color: #001F3F; /* Navy blue color */
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: center; /* Center the title */
+            align-items: center;
+        }
+        .title {
+            text-align: center;
+            margin-top: 50px; /* Increased margin for better spacing */
+            font-size: 2.5em; /* Slightly larger font size */
+        }
+        .form-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .input-field {
+            margin: 15px 0;
+        }
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 300px; /* Width for the input fields */
+            font-size: 1em; /* Font size for the input fields */
+        }
+        .button {
+            background-color: #007BFF; /* Blue color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-decoration: none; /* Remove underline from links */
+        }
+        .button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <form action="/userValidation" method="POST">
+            <div class="input-field">
+                <input type="text" name="username" placeholder="Username" required>
+            </div>
+            <div class="input-field">
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="button">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>

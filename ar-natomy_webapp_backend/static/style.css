@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Match your index background */
+    margin: 0;
+    padding: 0; /* Remove default padding */
+}
+
+h1 {
+    color: #333; /* Text color for headings */
+}
+
+.header {
+    background-color: #007BFF; /* Header background color (blue) */
+    padding: 20px;
+    position: relative;
+}
+
+.logout-button {
+    position: absolute; /* Position logout button */
+    top: 10px; /* Distance from top */
+    left: 20px; /* Distance from left */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.btn {
+    display: inline-block; /* Ensure button is treated as a block */
+    padding: 10px 20px; /* Increase button size */
+    font-size: 18px; /* Font size */
+    background-color: #007BFF; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove borders */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.content {
+    padding: 20px; /* Add some padding to the content */
+    background-color: #f0f0f0; /* Ensure the content area matches the body */
+    min-height: calc(100vh - 80px); /* Ensure the content takes full height minus header */
+}
