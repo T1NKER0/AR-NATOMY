@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<script language="javascript">
+
+	
+	function findInArray()
+	{
+		var cars = ["Saab","Volvo","BMW"];
+		var X;  
+		X=document.getElementById("index").value;
+		alert("You have selected " + X);
+		if (X<3){
+			document.getElementById("demo").innerHTML = cars[X];  
+			}else{
+				document.getElementById("demo").innerHTML ="Out of range!"; 
+			}
+	}
+
+</script>
+
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<p>Array indexes are zero-based, which means the first item is [0].</p>
+
+
+<form id="form1" name="form1">
+	Index: <input type="text" id="index" name="index"><br>
+	<button type="button" onclick='findInArray()'>Click Me!</button>
+</form>
+<H1 id="demo"></H1>
+
+</body>
+</html>
