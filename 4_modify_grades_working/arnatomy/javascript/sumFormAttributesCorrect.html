@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<script language="JavaScript">
+	function calculate()
+	{
+		var x, y, z;  // Statement 1
+		x=document.getElementById("X").value;
+		y=document.getElementById("Y").value;
+		z = parseFloat(x) + parseFloat(y);  
+		var w = x + y;
+		document.getElementById("demoZ").innerHTML ="The sum (z) is " + z + ".";
+		document.getElementById("demoW").innerHTML ="The sum is (w) " + w + ".";
+	}
+</script>
+
+<body>
+
+<h2>JavaScript and HTML forms</h2>
+
+<p>A <b>JavaScript program</b> accessing the attributes in a form!</p>
+<form id="form1" name="form1">
+	X: <input type="text" id="X" name="X"><br>
+	Y: <input type="text" id="Y" name="Y"><br>
+	<button type="button" onclick='calculate()'>Click Me!</button>
+</form>
+<p id="demoW"></p>
+<p id="demoZ"></p>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<p>When adding a number and a string, JavaScript will treat the number as a string.</p>
+
+<p id="demoW"></p>
+<p id="demoX"></p>
+<p id="demoY"></p>
+<p id="demoZ"></p>
+<button type="button" onClick='aa()'>Click</button>
+
+
+<script>
+
+
+var w = 16 + "Volvo";
+var x = 16 + 4 + "Volvo";
+var y = "Volvo" + 16 + 4;
+var z = x + y;
+
+document.getElementById("demoW").innerHTML = "W: " + w;
+document.getElementById("demoX").innerHTML = "X: " + x;
+document.getElementById("demoY").innerHTML = "Y: " + y;
+document.getElementById("demoZ").innerHTML = "Z: " + z;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<script language="JavaScript">
+	function calculate()
+	{
+		var firstName, lastName, completeName;  // Statement 1
+		firstName=document.getElementById("firstName").value;
+		lastName=document.getElementById("lastName").value;
+		completeName = firstName + " "+ lastName;    // Statement 4
+		alert(completeName);
+		document.getElementById("demo").innerHTML ="Complete name: " + completeName + ".";  
+	}
+</script>
+
+<body>
+
+<h2>JavaScript and HTML forms</h2>
+
+<p>A <b>JavaScript program</b> accessing the attributes in a form!</p>
+<form id="form1" name="form1">
+	First name: <input type="text" id="firstName" name="firstName"><br>
+	Last name: <input type="text" id="lastName" name="lastName"><br>
+	<button type="button" onclick='calculate()'>Click Me!</button>
+</form>
+<p id="demo"></p>
+
+</body>
+</html>
